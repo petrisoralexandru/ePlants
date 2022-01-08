@@ -1,9 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\kwixa\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\kwixa\\.nuget\\packages",
-      "E:\\vs_sdk\\NuGetPackages"
-    ]
-  }
-}
