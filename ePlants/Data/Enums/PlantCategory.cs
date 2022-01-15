@@ -3,6 +3,7 @@
     public enum PlantCategory
     {
         Indoor,
-        Outdoor
+        Outdoor,
+        Both
     }
 }
