@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ManufacturerModel>
+
+@{
+    ViewData["Title"] = "Lista comercianti";
+}
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<div class="bg-white w-full shadow rounded-lg mt-3 p-6">
+    <div class="md:flex items-center">
+        <div class="w-20 h-20 bg-yellow-50 rounded flex flex-shrink-0 items-center justify-center">
+            <img src="https://banner2.cleanpng.com/20190131/lcf/kisspng-food-produce-logo-plants-font-5c529d6d016c20.3964721515489181250058.jpg" alt="hexa-logo" tabindex="0" class="focus:outline-none w-full h-full">
+        </div>
+        <div class="md:ml-6 md:mt-0 mt-4 w-full">
+            @foreach(ManufacturerModel item in Model)
+            {
+            <div class="flex items-center justify-between">
+                <p tabindex="0" class="focus:outline-none text-xl font-semibold leading-5 text-gray-800">@Html.DisplayFor(model => item.Name)</p>
+                <p tabindex="0" class="focus:outline-none text-sm leading-3 text-white px-4 py-2 bg-green-500 rounded-full">@Html.DisplayFor(model => item.WebsiteUrl)</p>
+            </div>
+            <p tabindex="0" class="focus:outline-none text-sm pt-2 text-gray-600">@Html.DisplayFor(model => item.Description)</p>
+            <div tabindex="0" class="focus:outline-none mt-4 flex items-center">
+                <p class="text-xs leading-3 text-gray-600">@Html.DisplayFor(model => item.Email)</p>
+                <p class="text-xs leading-3 text-gray-600 ml-4">@Html.DisplayFor(model => item.Telephone)</p>
+            </div>
+            }
+        </div>
+    </div>
+</div>

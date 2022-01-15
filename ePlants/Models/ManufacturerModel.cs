@@ -9,6 +9,7 @@ namespace ePlants.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        [Display(Name = "Website")]
         public string WebsiteUrl { get; set; }
         public string Email { get; set; }
         public string Telephone { get; set; }

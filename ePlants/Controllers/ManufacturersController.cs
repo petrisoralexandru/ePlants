@@ -17,7 +17,7 @@ namespace ePlants.Controllers
         public IActionResult Index()
         {
             List<ManufacturerModel> data = _context.Manufacturers.ToList();
-            return View();
+            return View(data);
         }
     }
 }
