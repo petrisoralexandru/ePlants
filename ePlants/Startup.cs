@@ -1,4 +1,5 @@
 using ePlants.Data;
+using ePlants.Data.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +23,8 @@ namespace ePlants
         {
             //DbContext config
             services.AddDbContext<PlantsDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
+
+            services.AddScoped<IManufacturersService, ManufacturersService>();
 
             services.AddControllersWithViews();
         }
