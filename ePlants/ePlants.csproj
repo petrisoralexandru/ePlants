@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\img\manufacturers\gradina-tulcea.jpg" />
+    <Content Remove="wwwroot\img\plants\Watermelon-Peperomia.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="BamButz.MSBuild.TailwindCSS" Version="1.3.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -15,6 +20,11 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\img\manufacturers\gradina-tulcea.jpg" />
+    <None Include="wwwroot\img\plants\Watermelon-Peperomia.jpg" />
   </ItemGroup>
 
 </Project>
