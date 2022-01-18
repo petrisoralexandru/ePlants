@@ -10,6 +10,7 @@ namespace ePlants.Models
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
+        public string PictureURL { get; set; }
         public PlantCategory PlantCategory { get; set; }
         public string Description { get; set; }
         [Column(TypeName = "decimal(5,2)")]
