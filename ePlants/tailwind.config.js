@@ -1,12 +1,23 @@
 // tailwind.config.js
 module.exports = {
   purge: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
-    extend: {},
+      extend: {
+          colors: {
+              'primary': '#AAFCB8',
+              'secondary': '#8CD790',
+              'accent': '#285943',
+              'light': '#D7FFF1'
+          }
+      },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+    plugins: [
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/typography'),
+        require('@tailwindcss/aspect-ratio')
+    ],
 }
