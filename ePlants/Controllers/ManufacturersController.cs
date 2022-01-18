@@ -3,20 +3,21 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 using ePlants.Models;
+using ePlants.Data.Services;
 
 namespace ePlants.Controllers
 {
     public class ManufacturersController : Controller
     {
-        private readonly PlantsDbContext _context;
+        private readonly IManufacturersService _service;
 
-        public ManufacturersController(PlantsDbContext context)
+        public ManufacturersController(IManufacturersService _service)
         {
-            _context = context;
+            this._service = _service;
         }
         public IActionResult Index()
         {
-            List<ManufacturerModel> data = _context.Manufacturers.ToList();
+            IEnumerable<ManufacturerModel> data = _service.GetAll();
             return View(data);
         }
     }

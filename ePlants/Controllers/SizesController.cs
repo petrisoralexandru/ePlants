@@ -18,7 +18,7 @@ namespace ePlants.Controllers
         public IActionResult Index()
         {
             List<SizeModel> data = _context.Sizes.ToList();
-            return View();
+            return View(data);
         }
     }
 }
